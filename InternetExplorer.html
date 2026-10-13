@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Forza IE11 a usare il motore di rendering più recente disponibile -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito Compatibile IE11</title>
+    
+    <style>
+        /* CSS VECCHIA SCUOLA: Niente variabili CSS, niente Grid moderno */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            /* Centratura classica compatibile con i vecchi browser */
+            margin: 50px auto; 
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #dddddd;
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004499;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #228b22;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sito Web di Prova</h1>
+        <p>Questo sito è stato programmato specificamente per funzionare su Internet Explorer 11 e browser moderni.</p>
+        
+        <!-- Pulsante per testare il JavaScript -->
+        <button id="mioBottone">Cliccami!</button>
+        
+        <div id="output"></div>
+    </div>
+
+    <script>
+        /* JAVASCRIPT JAVASCRIPT ES5: Niente funzioni freccia (()=>), niente let/const rischiosi */
+        var bottone = document.getElementById('mioBottone');
+        var testoOutput = document.getElementById('output');
+
+        // Uso del classico addEventListener (supportato da IE9 in su, IE11 incluso)
+        bottone.addEventListener('click', function() {
+            // Logica semplice senza stringhe letterali moderne (niente ` backtick)
+            testoOutput.innerHTML = "Ciao!, sono ANATROCCOLO AMIDO MIO";
+        });
+    </script>
+
+</body>
+</html>
